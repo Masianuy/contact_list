@@ -1,0 +1,14 @@
+.list-wrap {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+.list-item {
+  padding-left: 1rem;
+  border: 1px solid #000000;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
