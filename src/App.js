@@ -43,6 +43,20 @@ class App extends Component {
     this.saveToStorage(contacts);
   };
 
+  addEmptyContact = () => {
+    console.log('ss')
+    const emptyContact = {
+      id: new Date().toLocaleTimeString(),
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+    }
+    this.setState({
+      ...this.state.contacts.push(emptyContact)
+    })
+  }
+
   render() {
     return (
       <div className='container'>
@@ -55,7 +69,7 @@ class App extends Component {
           <ContactForm  addContact={this.addContact}
                         contactForEdit={this.state.contactForEdit}/>
         </div>
-        <button className='btn-add' type='button' >New</button>
+        <button className='btn-add' type='button' onClick={this.addEmptyContact}>New</button>
       </div>
     )
   }
