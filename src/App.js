@@ -46,7 +46,7 @@ class App extends Component {
   addEmptyContact = () => {
     console.log('ss')
     const emptyContact = {
-      id: new Date().toLocaleTimeString(),
+      id: Date.now(),
       firstName: '',
       lastName: '',
       email: '',
