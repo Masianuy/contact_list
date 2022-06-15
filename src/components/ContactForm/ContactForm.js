@@ -12,7 +12,7 @@ class ContactForm extends Component {
 
   onChange = (e) => {
     this.setState({
-      id: new Date().toLocaleTimeString(),
+      id: Date.now(),
       [e.target.name]: e.target.value,
     })
   };
